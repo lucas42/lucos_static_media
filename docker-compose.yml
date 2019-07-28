@@ -1,0 +1,18 @@
+version: '3'
+services:
+    static_media:
+      build: .
+      container_name: lucos_static_media
+      ports: 
+        - "8017:80"
+      volumes:
+        - "public:/usr/local/apache2/htdocs/"
+      image: lucas42/lucos_static_media
+
+volumes:
+  public:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: "addr=aurora,rw,nolock,hard,nointr,nfsvers=3"
+      device: ":/medlib/public"
