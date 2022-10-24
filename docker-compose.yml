@@ -8,6 +8,7 @@ services:
       volumes:
         - "public:/usr/local/apache2/htdocs/"
       image: lucas42/lucos_static_media
+      restart: always
 
 volumes:
   public:
