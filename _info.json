@@ -2,5 +2,5 @@
 	"system": "lucos_static_media",
 	"ci": {
 		"circle": "gh/lucas42/lucos_static_media"
-	
+	}
 }
