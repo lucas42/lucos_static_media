@@ -3,7 +3,7 @@ services:
       build: .
       container_name: lucos_static_media
       ports: 
-        - "8017:80"
+        - $PORT:80
       volumes:
         - "public:/usr/local/apache2/htdocs/"
       image: lucas42/lucos_static_media
