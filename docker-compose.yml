@@ -8,6 +8,12 @@ services:
         - "public:/usr/local/apache2/htdocs/"
       image: lucas42/lucos_static_media
       restart: always
+      healthcheck:
+        test: ["CMD", "wget", "-qO-", "http://127.0.0.1:80/"]
+        interval: 10s
+        timeout: 5s
+        retries: 3
+        start_period: 15s
 
 volumes:
   public:
