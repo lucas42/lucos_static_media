@@ -6,7 +6,7 @@ services:
         - $PORT:80
       volumes:
         - "public:/usr/local/apache2/htdocs/"
-      image: lucas42/lucos_static_media
+      image: lucas42/lucos_static_media:${VERSION:-latest}
       restart: always
       healthcheck:
         test: ["CMD", "wget", "-qO-", "http://127.0.0.1:80/"]
