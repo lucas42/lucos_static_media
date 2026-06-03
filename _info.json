@@ -1,5 +1,7 @@
 {
 	"system": "lucos_static_media",
+	"checks": {},
+	"metrics": {},
 	"ci": {
 		"circle": "gh/lucas42/lucos_static_media"
 	}
